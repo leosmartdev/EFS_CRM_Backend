@@ -31,7 +31,8 @@ class LoginController extends ApiController
             'expires_in' => auth()->factory()->getTTL() * 60,
             'user' => array(
                 'id' => $user->hashid,
-                'name' => $user->name
+                'name' => $user->name,
+                'email' => $user->email
             )
         ], 200);
     }
